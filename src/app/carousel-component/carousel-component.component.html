@@ -1,0 +1,12 @@
+<div class="container justify-content-center">
+    <button class="prev-button" (click)="prevClick()" [disabled]="isDisabledPrev">
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+    <img [src]="src" />
+    <button class="next-button" (click)="nextClick()" [disabled]="isDisabledNext">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+</div>
+<div class="carousel-dots">
+    <span class="dot" *ngFor="let dot of dots; let i = index" [ngClass]="{'active': dot}"></span>
+</div>
